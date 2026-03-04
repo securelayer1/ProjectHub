@@ -74,21 +74,29 @@ header h1 {
 
 /* ================== ABOUT / DESPRE ================== */
 #about-compact {
-    max-width: 900px;
-    margin: 0 auto 50px auto;
-    padding: 10px 15px;
+    max-width: 900px;        /* lățime optimă pentru text */
+    margin: 30px auto;       /* centru pe pagină + spațiu sus/jos */
+    padding: 0 20px;         /* mic spațiu lateral */
+    box-sizing: border-box;
 }
-.about-column h2.highlight {
-    color: #ff69b4;
-    font-size: 22px;
-    margin: 10px 0 6px 0;
+
+/* Titluri EN și RO */
+#about-compact h2.highlight {
+    color: #ff69b4;           /* roz vibrant */
+    font-family: 'Arial', sans-serif; /* font uniform */
+    font-size: 22px;           /* dimensiune uniformă */
+    margin: 20px 0 10px 0;     /* spațiu de sus și jos */
+    line-height: 1.2;
 }
-.about-column p.compact-text {
-    font-family: 'Verdana', sans-serif;
-    font-size: 16px;
-    line-height: 1.3;
-    margin: 4px 0;
-    text-align: justify;
+
+/* Paragrafe EN și RO */
+#about-compact p.compact-text {
+    font-family: 'Verdana', sans-serif; /* font uniform */
+    font-size: 16px;        /* dimensiune text lizibilă */
+    line-height: 1.4;       /* distanță între rânduri egale */
+    margin: 8px 0;          /* spațiu egal între paragrafe */
+    text-align: justify;    /* aliniere curată stânga-dreapta */
+    color: #333;            /* culoare text uniformă */
 }
 
 /* ================== SEMNĂTURĂ & FOOTER ================== */
