@@ -1,133 +1,74 @@
 <!DOCTYPE html>
 <html lang="ro">
-
-</html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site-ul meu</title>
+    <title>Project Hub</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0K530EZ5H"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7C9VQGFEB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z7C9VQGFEB');
-</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7C9VQGFEB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z7C9VQGFEB');
+    </script>
 </head>
 
 <body>
-
     <header>
         <h1>Welcome to My Project Hub</h1>
-       
     </header>
 
-    <main>
-  <!-- Chenar alb simplu -->
-<section class="hero-box">
-  <div class="hero-content">
-    <p>I learn, explore, and share thoughts and stories from my experiences with you.</p>
-  </div>
-</section>
-<!-- Textul "Articole" sub chenar, în stânga -->
-<div style="
-    color: #FF1493; 
-    font-size: 28px; 
-    font-family: 'Arial', sans-serif;
-    margin-top: 40px;
-    text-align: left;
-    padding-left: 10px; /* mică distanță de la marginea stângă */
-">
+    <!-- CARDURI SUB TITLU -->
+    <section id="project-hub">
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Food & Nutrition</h3>
+                <p>Recipes, healthy eating ideas, and tips for a balanced diet.</p>
+            </div>
+            <div class="project-card">
+                <h3>Fitness & Exercise</h3>
+                <p>Workouts, training tips, and staying active in daily life.</p>
+            </div>
+            <div class="project-card">
+                <h3>Beauty & Body Care</h3>
+                <p>Skincare routines, beauty tips, cosmetics, and everyday body care advice.</p>
+            </div>
+            <div class="project-card">
+                <h3>Life Experiences</h3>
+                <p>Personal stories, lessons learned, and insights from everyday life.</p>
+            </div>
+        </div>
+    </section>
 
-</div>
-<h2>Articole</h2>
-<style>
-.hero-box {
-  background-color: #ffffff; /* fundal alb */
-  padding: 30px 20px;        /* spațiu în interior */
-  border-radius: 8px;        /* colțuri rotunjite */
-  text-align: center;        /* text centrat */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* umbră subtilă */
-  margin-bottom: 20px;       /* distanță față de secțiunea următoare */
-}
+    <!-- TEXT + VIDEO -->
+    <section id="intro">
+        <p>Născută în primăvară, deci oficial alerg după soare și optimism 🌞</p>
+        <video controls class="video-responsive">
+            <source src="videos/video1.mp4" type="video/mp4">
+            Browserul tău nu suportă tag-ul video.
+        </video>
+    </section>
 
-.hero-content p {
-  font-size: 1.3rem;        /* mărime text */
-  color: #333333;           /* culoare text */
-  margin: 0;
-}
-</style> 
-<p>Născută în primăvară, deci oficial alerg după soare și optimism🌞</p>
-    <h2><video controls style="max-width: 400px; height: auto;">
-  <source src="videos/video1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video></h2>
-    
-</article>
-        
-    </main>
+    <!-- ABOUT / DESPRE -->
+    <section id="about-compact">
+        <div class="about-column">
+            <h2 class="highlight">About me</h2>
+            <p class="compact-text">
+                Hi! I’m Adri. After some experiences in my life, I decided to make a change, a change that reflects in different aspects: health, both physical and emotional, freedom, curiosity, and the desire to explore new things. Regarding health, I mean learning self-respect, saying “no” when needed, exploring meditation and exercises for personal balance, experimenting and learning about self-respect and personal boundaries.
+            </p>
+            <h2 class="highlight">Despre mine</h2>
+            <p class="compact-text">
+                Bună! Sunt Adri. După anumite experiențe din viața mea, am decis să fac o schimbare, o schimbare care se reflectă în mai multe aspecte: sănătate fizică și emoțională, libertate, curiozitate și dorința de a explora lucruri noi. În ceea ce privește sănătatea, mă refer la a învăța să mă respect, să spun „nu” atunci când e nevoie, să explorez meditații și exerciții pentru echilibru personal, să experimentez și să învăț despre respectul de sine și limitele mele.
+            </p>
+        </div>
+    </section>
 
+    <!-- SEMNĂTURĂ ȘI FOOTER -->
+    <footer>
+  
+        <p>&copy; 2026 Adri. All rights reserved.</p>
+    </footer>
 </body>
-
-    <!-- Header -->
-    <header>
-        
-
-    </header>
-
-    <!-- Conținut principal -->
-    <main>
-        <section id="about" style="padding:20px; max-width:800px; margin:auto; line-height:1.6; font-family:sans-serif;">
-
-  <!-- Varianta în română -->
-  <h2>Despre mine</h2>
-  <p>Bună! Sunt Adri.</p>
-  <p>După anumite experiențe din viața mea, am decis să fac o schimbare, o schimbare care se reflectă în mai multe aspecte, sănătate fizică și emoțională, libertate, curiozitate și dorința de a explora lucruri noi. În ceea ce privește sănătatea, mă refer la a învăța să mă respect, să spun „nu” atunci când e nevoie, să explorez meditații și exerciții pentru echilibru personal, să experimentez și să învăț despre respectul de sine și limitele mele.</p>
-  <p>Acest site este un proiect personal în care împărtășesc câteva dintre lucrurile pe care le consider valoroase, și sper să inspir și pe alții să-și urmeze propriile idei și pasiuni. Lucrul meu în spatele acestui proiect mă ajută să învăț, să experimentez și să mă dezvolt, și vreau să împărtășesc această călătorie cu voi.</p>
-
-  <!-- Varianta în engleză -->
-  <h2>About me</h2>
-  <p>Hi! I’m Adri.</p>
-  <p>After some experiences in my life, I decided to make a change, a change that reflects in different aspects: health, both physical and emotional, freedom, curiosity, and the desire to explore new things. Regarding health, I mean learning self-respect, saying “no” when needed, exploring meditation and exercises for personal balance, experimenting and learning about self-respect and personal boundaries.</p>
-  <p>This website is a personal project where I share some of the things I consider valuable, and I hope to inspire others to follow their own ideas and passions. Working behind this project helps me learn, experiment, and grow, and I want to share this journey with you.</p>
-
-</section>
-
-        <section>
-            <h2>Servicii / Proiecte</h2>
-            <p> 
-                <section id="project-hub">
-  <p>Explore all my projects, tips, and life experiences in one place.</p>
-
-  <div class="project-grid">
-
-    <!-- Row 1 -->
-    <div class="project-card">
-      <h3>Food & Nutrition</h3>
-      <p>Recipes, healthy eating ideas, and tips for a balanced diet.</p>
-    </div>
-    <div class="project-card">
-      <h3>Fitness & Exercise</h3>
-      <p>Workouts, training tips, and staying active in daily life.</p>
-    </div>
-
-    <!-- Row 2 -->
-    <div class="project-card">
-  <h3>Beauty & Body Care</h3>
-  <p>Skincare routines, beauty tips, cosmetics, and everyday body care advice.</p>
-</div>
-    <div class="project-card">
-      <h3>Life Experiences</h3>
-      <p>Personal stories, lessons learned,
-
-
-        </section>
-    </main>
-
-    <!-- Footer -->
+</html>
