@@ -91,14 +91,25 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/* Video responsive */
+/* Video local */
 .video-section video {
-    width: 100%;       /* se întinde maxim cât containerul */
-    max-width: 700px;  /* lățimea maximă pentru ecrane mari */
-    height: auto;      /* păstrează proporțiile */
+    width: 100%;
+    max-width: 700px;
+    height: auto;
     border-radius: 10px;
-    display: block;    /* să fie centrat */
-    margin: 0 auto;    /* centru horizontal */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Video YouTube */
+.video-section iframe {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 16 / 9;  /* păstrează proporția video */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* ================== ABOUT ================== */
