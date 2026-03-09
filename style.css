@@ -23,54 +23,87 @@ header h1 {
     text-align: center;
 }
 
-/* ================== CARDURI ================== */
-#project-hub {
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-    padding: 0 10px;
-}
-.project-grid {
-    display: flex;       /* toate cardurile pe un rand */
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 15px;
-    overflow-x: auto;    /* scroll dacă nu încap */
-}
-.project-card {
-    flex: 1 0 250px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    min-width: 250px;
-}
-.project-card h3 {
-    color: #ff69b4;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-.project-card p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0;
+/* ================== MENIU HAMBURGER ================== */
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
+.menu-toggle {
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* CARDURI ÎN MENIU (ascunse inițial) */
+.menu-cards {
+  display: none; /* ascuns inițial */
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.menu-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+  text-align: center;
+}
+
+.menu-card:hover {
+  background: #fff0e0;
+  transform: translateY(-3px);
+}
 /* ================== INTRO (TEXT + VIDEO) ================== */
-#intro {
-    max-width: 900px;
-    margin: 0 auto 50px auto;
-    padding: 10px;
-    text-align: center;
+/* CSS */
+.video-container {
+  width: 100%;              /* video ocupă tot spațiul disponibil */
+  max-width: 500px;         /* limitează lățimea pentru desktop */
+  margin: 20px auto;        /* centru pe pagină */
+  text-align: center;       /* textul centrat sub video */
+  font-family: 'Arial', sans-serif;
 }
-#intro p {
-    font-size: 18px;
-    margin-bottom: 15px;
+
+.video-container video {
+  width: 100%;              /* video responsive */
+  height: auto;
+  border-radius: 10px;      /* colțuri rotunjite */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-.video-responsive {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
+
+.video-caption {
+  margin-top: 8px;
+  font-size: 16px;          /* text clar și lizibil */
+  color: #333;
+  line-height: 1.4;
 }
+
 
 /* ================== ABOUT / DESPRE ================== */
 #about-compact {

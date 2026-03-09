@@ -25,37 +25,44 @@
     <header>
         <h1>Welcome to My Project Hub</h1>
     </header>
+<script>
+const toggle = document.getElementById('menu-toggle');
+const menuCards = document.getElementById('menu-cards');
 
-    <!-- CARDURI SUB TITLU -->
-    <section id="project-hub">
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Food & Nutrition</h3>
-                <p>Recipes, healthy eating ideas, and tips for a balanced diet.</p>
-            </div>
-            <div class="project-card">
-                <h3>Fitness & Exercise</h3>
-                <p>Workouts, training tips, and staying active in daily life.</p>
-            </div>
-            <div class="project-card">
-                <h3>Beauty & Body Care</h3>
-                <p>Skincare routines, beauty tips, cosmetics, and everyday body care advice.</p>
-            </div>
-            <div class="project-card">
-                <h3>Life Experiences</h3>
-                <p>Personal stories, lessons learned, and insights from everyday life.</p>
-            </div>
-        </div>
-    </section>
+// Funcție pentru toggle carduri
+toggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // nu propaga click-ul pentru a nu închide imediat
+  menuCards.style.display = menuCards.style.display === 'flex' ? 'none' : 'flex';
+});
 
+// Închide cardurile dacă dai click în afara meniului
+document.addEventListener('click', (e) => {
+  if (!menuCards.contains(e.target) && !toggle.contains(e.target)) {
+    menuCards.style.display = 'none';
+  }
+});
+
+// Click pe card – poți adăuga scroll sau link mai târziu
+document.querySelectorAll('.menu-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const targetId = card.getAttribute('data-target');
+    console.log("Ai apăsat pe cardul:", targetId);
+    menuCards.style.display = 'none';
+  });
+});
+</script>
     <!-- TEXT + VIDEO -->
-    <section id="intro">
-        <p>Născută în primăvară, deci oficial alerg după soare și optimism 🌞</p>
-        <video controls class="video-responsive">
-            <source src="videos/video1.mp4" type="video/mp4">
-            Browserul tău nu suportă tag-ul video.
-        </video>
-    </section>
+
+<!-- HTML -->
+<div class="video-container">
+  <div class="video-caption">🌸 Primăvara aceasta este despre energie și bucurie!</div>
+  <video src="videos/video1.mp4" controls></video>
+</div>
+
+<div class="video-container">
+  <div class="video-caption">✨ Solitudine,singuratate!</div>
+  <video src="videos/video2.mp4" controls></video>
+</div>
 
     <!-- ABOUT / DESPRE -->
 <section id="about-compact">
