@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <!-- Meta tags pentru Instagram / social preview -->
-<meta property="og:title" content="Project Hub - Adri 2026">
-<meta property="og:description" content="Explore all my tips and life experiences in one place.">
-<meta property="og:image" content="https://username.github.io/proiectul-tau/thumbnail.jpg">
-<meta property="og:url" content="https://username.github.io/proiectul-tau/index.html?v=1">
-<meta property="og:type" content="website">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Hub</title>
+
+    <!-- Meta tags pentru Instagram / social preview -->
+    <meta property="og:title" content="Project Hub - Adri 2026">
+    <meta property="og:description" content="Explore all my tips and life experiences in one place.">
+    <meta property="og:image" content="https://username.github.io/proiectul-tau/thumbnail.jpg">
+    <meta property="og:url" content="https://username.github.io/proiectul-tau/index.html?v=1">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="style.css">
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7C9VQGFEB"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z7C9VQGFEB');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Z7C9VQGFEB');
     </script>
 </head>
-
 <body>
+
+    <!-- HEADER STICKY -->
     <header>
         <h1>Welcome to My Project Hub</h1>
+
+        <!-- MENIU HAMBURGER DREAPTA SUS -->
+<nav class="menu">
+  <!-- Buton hamburger -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Carduri doar în meniu (ascunse inițial) -->
+  <div class="menu-cards" id="menu-cards">
+    <div class="menu-card">Food & Nutrition</div>
+    <div class="menu-card">Fitness & Exercise</div>
+    <div class="menu-card">Beauty & Body Care</div>
+    <div class="menu-card">Life Experiences</div>
+  </div>
+</nav>
     </header>
-<script>
-const toggle = document.getElementById('menu-toggle');
-const menuCards = document.getElementById('menu-cards');
 
-// Funcție pentru toggle carduri
-toggle.addEventListener('click', (e) => {
-  e.stopPropagation(); // nu propaga click-ul pentru a nu închide imediat
-  menuCards.style.display = menuCards.style.display === 'flex' ? 'none' : 'flex';
-});
+    <!-- SECȚIUNEA PRINCIPALĂ CU VIDEO ȘI DESCRIERE -->
+    <main>
+        <!-- Video 1 -->
+        <section id="video1" class="video-section">
+            <h2>🌸 Primăvara aceasta este despre energie și bucurie!</h2>
+            <video width="100%" controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        </section>
 
-// Închide cardurile dacă dai click în afara meniului
-document.addEventListener('click', (e) => {
-  if (!menuCards.contains(e.target) && !toggle.contains(e.target)) {
-    menuCards.style.display = 'none';
-  }
-});
+        <!-- Video 2 -->
+        <section id="video2" class="video-section">
+            <h2>✨ Solitudine, singuratate!</h2>
+            <video width="100%" controls>
+                <source src="videos/video2.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        </section>
 
-// Click pe card – poți adăuga scroll sau link mai târziu
-document.querySelectorAll('.menu-card').forEach(card => {
-  card.addEventListener('click', () => {
-    const targetId = card.getAttribute('data-target');
-    console.log("Ai apăsat pe cardul:", targetId);
-    menuCards.style.display = 'none';
-  });
-});
-</script>
-    <!-- TEXT + VIDEO -->
+        <!-- About / Despre -->
+        <section id="about" class="about-section">
+            <div class="about-column">
+                <!-- About me - EN -->
+                <h2 class="highlight">About me</h2>
+                <p class="compact-text">
+                    Hi! I’m Adri. After some experiences in my life, I decided to make a change, a change that reflects in different aspects: health, both physical and emotional, freedom, curiosity, and the desire to explore new things. Regarding health, I mean learning self-respect, saying “no” when needed, exploring meditation and exercises for personal balance, experimenting and learning about self-respect and personal boundaries.
+                </p>
+                <p class="compact-text">
+                    This website is a personal project where I share some of the things I consider valuable, and I hope to inspire others to follow their own ideas and passions. Working behind this project helps me learn, experiment, and grow, and I want to share this journey with you.
+                </p>
 
-<!-- HTML -->
-<div class="video-container">
-  <div class="video-caption">🌸 Primăvara aceasta este despre energie și bucurie!</div>
-  <video src="videos/video1.mp4" controls></video>
-</div>
+                <!-- Despre mine - RO -->
+                <h2 class="highlight">Despre mine</h2>
+                <p class="compact-text">
+                    Bună! Sunt Adri. După anumite experiențe din viața mea, am decis să fac o schimbare, o schimbare care se reflectă în mai multe aspecte: sănătate fizică și emoțională, libertate, curiozitate și dorința de a explora lucruri noi. În ceea ce privește sănătatea, mă refer la a învăța să mă respect, să spun „nu” atunci când e nevoie, să explorez meditații și exerciții pentru echilibru personal, să experimentez și să învăț despre respectul de sine și limitele mele.
+                </p>
+                <p class="compact-text">
+                    Acest site este un proiect personal în care împărtășesc câteva dintre lucrurile pe care le consider valoroase, și sper să inspir și pe alții să-și urmeze propriile idei și pasiuni. Lucrul meu în spatele acestui proiect mă ajută să învăț, să experimentez și să mă dezvolt, și vreau să împărtășesc această călătorie cu voi.
+                </p>
+            </div>
+        </section>
+    </main>
 
-<div class="video-container">
-  <div class="video-caption">✨ Solitudine,singuratate!</div>
-  <video src="videos/video2.mp4" controls></video>
-</div>
-
-    <!-- ABOUT / DESPRE -->
-<section id="about-compact">
-    <div class="about-column">
-        <!-- About me - EN -->
-        <h2 class="highlight">About me</h2>
-        <p class="compact-text">
-            Hi! I’m Adri. After some experiences in my life, I decided to make a change, a change that reflects in different aspects: health, both physical and emotional, freedom, curiosity, and the desire to explore new things. Regarding health, I mean learning self-respect, saying “no” when needed, exploring meditation and exercises for personal balance, experimenting and learning about self-respect and personal boundaries.
-        </p>
-        <p class="compact-text">
-            This website is a personal project where I share some of the things I consider valuable, and I hope to inspire others to follow their own ideas and passions. Working behind this project helps me learn, experiment, and grow, and I want to share this journey with you.
-        </p>
-
-        <!-- Despre mine - RO -->
-        <h2 class="highlight">Despre mine</h2>
-        <p class="compact-text">
-            Bună! Sunt Adri. După anumite experiențe din viața mea, am decis să fac o schimbare, o schimbare care se reflectă în mai multe aspecte: sănătate fizică și emoțională, libertate, curiozitate și dorința de a explora lucruri noi. În ceea ce privește sănătatea, mă refer la a învăța să mă respect, să spun „nu” atunci când e nevoie, să explorez meditații și exerciții pentru echilibru personal, să experimentez și să învăț despre respectul de sine și limitele mele.
-        </p>
-        <p class="compact-text">
-            Acest site este un proiect personal în care împărtășesc câteva dintre lucrurile pe care le consider valoroase, și sper să inspir și pe alții să-și urmeze propriile idei și pasiuni. Lucrul meu în spatele acestui proiect mă ajută să învăț, să experimentez și să mă dezvolt, și vreau să împărtășesc această călătorie cu voi.
-        </p>
-    </div>
-</section>
-        </div>
-    </section>
-
-    <!-- SEMNĂTURĂ ȘI FOOTER -->
+    <!-- FOOTER -->
     <footer>
-  
         <p>&copy; 2026 Adri. All rights reserved.</p>
     </footer>
+
+    <!-- Leagă JS-ul separat -->
+    <script src="js/menu.js"></script>
+
 </body>
 </html>
