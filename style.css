@@ -183,3 +183,10 @@ footer {
     background: transparent;
     color: #111;
 }
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
