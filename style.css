@@ -73,7 +73,9 @@ body {
 }
 
 .about-box {
-    background: white;
+    background: black;   /* fundal negru */
+    color: white;        /* 🔥 text alb vizibil */
+
     padding: 30px;
     max-width: 600px;
     width: 90%;
@@ -95,7 +97,7 @@ body {
   width: 100%;
   height: 100vh;
 
-  background: white; /* 🔥 IMPORTANT: fundal alb */
+  background: white; /* fundal meniu */
 
   display: none; /* ascuns inițial */
   flex-direction: column;
@@ -104,28 +106,23 @@ body {
 
   z-index: 1500;
 }
+
+/* când meniul este deschis */
 .menu-overlay.open {
   display: flex;
 }
+
+/* link-urile din meniu */
 .menu-overlay a {
-  color: black; /* 🔥 ca să se vadă pe alb */
+  color: black; /* text vizibil pe alb */
   font-size: 28px;
   margin: 15px 0;
   text-decoration: none;
 }
+
+/* hamburger (cele 3 linii) */
 .menu-toggle span {
   background: black;
-}
-
-.menu-overlay.open {
-  display: flex; /* apare când apeși meniul */
-}
-
-.menu-overlay a {
-  font-size: 28px;
-  margin: 15px 0;
-  text-decoration: none;
-  color: white;
 }
 /* ================== VIDEO SECTIONS ================== */
 .video-section {
