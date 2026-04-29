@@ -1,3 +1,7 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -85,36 +89,31 @@ body {
 }
 /* MENIU FULL SCREEN */
 .menu-overlay {
-  position: fixed; /* acoperă tot ecranul */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
 
-  background: white;
+  background: rgba(0, 0, 0, 0.9);
 
-  display: flex;
-  flex-direction: column; /* 👈 IMPORTANT: una sub alta */
+  display: none; /* ascuns când e închis */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  transform: translateY(-100%); /* ascuns inițial */
-  transition: 0.4s ease;
 
   z-index: 1500;
 }
 
-/* CÂND MENIUL ESTE DESCHIS */
 .menu-overlay.open {
-  transform: translateY(0);
+  display: flex; /* apare când apeși meniul */
 }
 
-/* LINK-URI DIN MENIU */
 .menu-overlay a {
   font-size: 28px;
   margin: 15px 0;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 /* ================== VIDEO SECTIONS ================== */
 .video-section {
