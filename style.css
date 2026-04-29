@@ -1,6 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  }
 
 /* reset general pentru pagină */
 html, body {
@@ -207,17 +208,30 @@ body {
 }
 
 /* ================== FOOTER ================== */
+
+/* FOOTER (partea de jos a site-ului) */
 footer {
     text-align: center;
+    /* centrează textul în footer */
+
     padding: 20px 0;
+    /* spațiu sus și jos în footer */
 
     background: transparent;
+    /* fundal transparent (se vede fundalul site-ului) */
+
     color: #111;
-}
-.page {
-  display: none;
+    /* culoarea textului (gri foarte închis / aproape negru) */
 }
 
+/* PAGINILE DIN SITE */
+.page {
+    display: none;
+    /* ascunde toate paginile implicit */
+}
+
+/* PAGINA ACTIVĂ */
 .page.active {
-  display: block;
+    display: block;
+    /* arată doar pagina care are clasa "active" */
 }
