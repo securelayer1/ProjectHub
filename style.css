@@ -1,27 +1,50 @@
 body, html {
   margin: 0;
   padding: 0;
+
+/* reset general pentru pagină */
+html, body {
+    margin: 0; 
+    /* scoate spațiul alb default din browser */
+
+    padding: 0;
+    /* scoate spațiul intern default */
+
+    height: 100%;
+    /* face pagina să ocupe tot ecranul */
 }
+
+/* stil general pentru site */
 body {
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font modern pentru text */
 
     background: linear-gradient(135deg, #38BDF8, #0EA5E9, #67E8F9);
+    /* fundal albastru gradient (efect modern) */
 }
 
+/* container principal (acum fără “card”) */
 .main-container {
-    background: rgba(255,255,255,0.85); /* card alb semi-transparent */
+    background: transparent;
+    /* fără fundal (lasă gradientul să se vadă) */
 
-    max-width: 1200px;
-    width: 94%;
+    width: 100%;
+    /* ocupă toată lățimea ecranului */
 
-    margin: 20px auto;
+    max-width: none;
+    /* fără limită de lățime */
 
-    border-radius: 16px;
+    margin: 0;
+    /* fără spații pe margini */
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 0;
+    /* fără colțuri rotunjite */
 
-    backdrop-filter: blur(10px);
+    box-shadow: none;
+    /* fără umbră (fără efect de “cutie”) */
+
+    backdrop-filter: none;
+    /* fără efect de blur */
 }
 /* HAMBURGER (dreapta sus) */
 .menu-toggle {
