@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background: linear-gradient(135deg, #38BDF8, #0EA5E9, #67E8F9);
+}
+
+.main-container {
+    background: rgba(255,255,255,0.85); /* card alb semi-transparent */
+
+    max-width: 1200px;
+    width: 94%;
+
+    margin: 20px auto;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    backdrop-filter: blur(10px);
+}
+/* HAMBURGER (dreapta sus) */
+.menu-toggle {
+  position: fixed; /* rămâne fix pe ecran */
+  top: 20px;
+  right: 20px; /* îl pune în dreapta */
+
+  width: 30px;
+  cursor: pointer;
+  z-index: 2000; /* peste tot */
+}
+
+/* CELE 3 LINII */
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #000;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+/* TRANSFORMARE ÎN X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0; /* dispare linia din mijloc */
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.about-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.5); /* fundal întunecat transparent */
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 3000;
+}
+
+.about-box {
+    background: white;
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+
+    border-radius: 12px;
+    text-align: center;
+}
+
+.close-about {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* MENIU FULL SCREEN */
+.menu-overlay {
+  position: fixed; /* acoperă tot ecranul */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background: white;
+
+  display: flex;
+  flex-direction: column; /* 👈 IMPORTANT: una sub alta */
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-100%); /* ascuns inițial */
+  transition: 0.4s ease;
+
+  z-index: 1500;
+}
+
+/* CÂND MENIUL ESTE DESCHIS */
+.menu-overlay.open {
+  transform: translateY(0);
+}
+
+/* LINK-URI DIN MENIU */
+.menu-overlay a {
+  font-size: 28px;
+  margin: 15px 0;
+  text-decoration: none;
+  color: black;
+}
+/* ================== VIDEO SECTIONS ================== */
+.video-section {
+    margin-top: 120px; /* să nu stea sub header */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Video local */
+.video-section video {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Video YouTube */
+.video-section iframe {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 16 / 9;  /* păstrează proporția video */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ================== ABOUT ================== */
+.compact-text {
+    font-size: 17px;       /* dimensiune optimă, nici prea mic, nici prea mare */
+    line-height: 1.65;     /* text aerisit, ușor de citit */
+    margin-bottom: 20px;   /* spațiu între paragrafe */
+    color: #2b2b2b;        /* text închis pe card alb */
+}
+@media (max-width: 768px) {
+    .compact-text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+.about-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+.highlight {
+    color:  #2b2b2b;
+}
+.compact-text {
+    margin-bottom: 15px;
+}
+
+/* ================== FOOTER ================== */
+footer {
+    text-align: center;
+    padding: 20px 0;
+
+    background: transparent;
+    color: #111;
+}

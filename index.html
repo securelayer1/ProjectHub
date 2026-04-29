@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT HUB</title>
+
+    <!-- Meta tags pentru Instagram / social preview -->
+    <!-- Meta tags pentru Instagram / social preview -->
+    <meta property="og:title" content="PROJECT HUB">
+    <meta property="og:description" content="Explore all my tips and life experiences in one place.">
+    <meta property="og:image" content="https://securelayer1.github.io/ProjectHub/thumbnail.jpg">
+    <meta property="og:url" content="https://securelayer1.github.io/ProjectHub/">
+    <meta property="og:type" content="website">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7C9VQGFEB"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z7C9VQGFEB');
+</script>
+
+</head>
+<body>
+
+<!-- CARD PRINCIPAL -->
+<div class="main-container">
+
+<header>
+  <nav class="menu"></nav>
+</header>
+
+<!-- CONȚINUTUL PAGINII TALE AICI -->
+
+</div> <!-- 🔥 închizi main-container -->
+
+</div>
+
+<!-- BUTON HAMBURGER -->
+<div class="menu-toggle" id="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- MENIU -->
+<div class="menu-overlay" id="menu-overlay">
+  <a href="#videos">Videos</a>
+  <a href="#stories">Stories</a>
+  <a href="about.html">About Me</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+    <!-- SECȚIUNEA PRINCIPALĂ CU VIDEO ȘI DESCRIERE -->
+   <section id="video1" class="video-section">
+    <h2>Starting to Adapt to Digital Life Can Feel Like Chaos</h2>
+    <iframe 
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/CDBvgKSPyMY"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<section id="video2" class="video-section">
+    <h2>Self-Worth Shift | Stop Losing Yourself</h2>
+    <iframe 
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/3DypOJwIzG8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<section id="video2" class="video-section">
+    <h2>Mental Clarity | Finding Structure</h2>
+    <iframe 
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/9KTRZxqRY8U"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</section>
+        <!-- About / Despre -->
+        <section id="about" class="about-section">
+            <div class="about-column">
+    </main>
+        </div> <!-- final main-container -->
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Adri. All rights reserved.</p>
+    </footer>
+
+<script>
+/* așteaptă să se încarce pagina */
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ia butonul hamburger */
+  const toggle = document.getElementById("menu-toggle");
+
+  /* ia meniul full screen */
+  const menu = document.getElementById("menu-overlay");
+
+  /* la click deschide/închide */
+  toggle.addEventListener("click", () => {
+
+    toggle.classList.toggle("active"); // face X
+    menu.classList.toggle("open");     // deschide meniul
+
+  });
+
+});
+</script>
+</body>
+</html>
